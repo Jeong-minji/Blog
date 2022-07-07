@@ -1,9 +1,22 @@
 name: "🚨 Bug"
 description: "버그를 상세하게 기록해주세요."
 title: "[ Project ]: "
-labels: ["bug", "triage"]
 
 body:
+  - type: dropdown
+    id: project-type
+    attributes:
+      label: Project
+      description: 어떤 프로젝트의 작업인가요?
+      options:
+        - ow-landing
+        - ow-main
+        - pixel-main
+        - pixel-admin
+        - design-system
+        - config
+    validations:
+      required: true
   - type: textarea
     id: Why need this change?
     attributes:
