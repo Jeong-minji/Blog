@@ -1,34 +1,36 @@
-name: "👻 Bug"
-description: "발생한 문제를 남겨주세요."
-title: "[Bug]: "
-labels: ["bug"]
+name: "🚨 Bug"
+description: "버그를 상세하게 기록해주세요."
+title: "[ Project ]: "
+labels: ["bug", "triage"]
 
 body:
-  - type: dropdown
-    id: field
-    attributes:
-      label: Select Field
-      description: 어디에 연관된 기능인가요?
-      options:
-        - Main Field (Default)
-        - Navigation Field
-        - Support Field
-    validations:
-      required: true
   - type: textarea
-    id: what-happened
+    id: Why need this change?
     attributes:
-      label: 어떤 문제가 발생했나요?
-      description: 원활한 작업을 위해 상세하게 기록해주세요.
+      label: What happened?
+      description: 해당 작업이 필요한 이유를 작성해주세요!
     validations:
       required: true
   - type: dropdown
     id: browsers
     attributes:
-      label: 브라우저 환경은 어떤건가요?
+      label: What browsers are you seeing the problem on?
       multiple: true
       options:
         - Firefox
         - Chrome
         - Safari
         - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: 작업 상세 내용을 적어주세요.
+    validations:
+      required: false
