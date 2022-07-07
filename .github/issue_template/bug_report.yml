@@ -1,0 +1,28 @@
+name: "👻 Bug"
+description: "발생한 문제를 남겨주세요."
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+
+- type: dropdown
+  id: field
+  attributes:
+  label: Select Field
+  description: 어디에 연관된 기능인가요?
+  options: - Main Field (Default) - Navigation Field - Support Field
+  validations:
+  required: true
+- type: textarea
+  id: what-happened
+  attributes:
+  label: 어떤 문제가 발생했나요?
+  description: 원활한 작업을 위해 상세하게 기록해주세요.
+  validations:
+  required: true
+- type: dropdown
+  id: browsers
+  attributes:
+  label: 브라우저 환경은 어떤건가요?
+  multiple: true
+  options: - Firefox - Chrome - Safari - Microsoft Edge
