@@ -4,7 +4,7 @@ title: "[ Project ]: "
 
 body:
   - type: dropdown
-    id: project-type
+    id: project
     attributes:
       label: Project
       description: 어떤 프로젝트의 작업인가요?
