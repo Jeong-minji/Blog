@@ -4,7 +4,7 @@ title: "[ Project ]: "
 
 body:
   - type: dropdown
-    id: project-type
+    id: project
     attributes:
       label: Project
       description: 어떤 프로젝트의 작업인가요?
@@ -18,9 +18,9 @@ body:
     validations:
       required: true
   - type: textarea
-    id: Why need this change?
+    id: why
     attributes:
-      label: What happened?
+      label: Why need this change?
       description: 해당 작업이 필요한 이유를 작성해주세요!
     validations:
       required: true
