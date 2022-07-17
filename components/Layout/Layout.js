@@ -7,17 +7,14 @@ import utilStyles from "../../styles/utils.module.css";
 
 import profile_image from "../../public/images/profile.png";
 
-const name = "Daisy";
-export const siteTitle = "Sample Blog Website";
+const name = "DDangji";
+export const siteTitle = "DDangji-log";
 
 const Layout = ({ children, home }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="Welcome to Ddangji FE blog!" />
         <meta name="og:title" content={siteTitle} />
       </Head>
       <header className={styles.header}>
