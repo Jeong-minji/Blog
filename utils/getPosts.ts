@@ -8,7 +8,7 @@ const postsDirectory = path.join(process.cwd(), "posts");
 
 const getSortedPostsData = () => {
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData: any = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, "");
 
     const fullPath = path.join(postsDirectory, fileName);

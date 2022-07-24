@@ -2,7 +2,8 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-import { Wrapper, Container, BackToHome } from "./LayoutStyle";
+import { Wrapper, BackToHome } from "./LayoutStyle";
+import { Container, Anchor } from "../../styles/CommonStyle";
 
 export const siteTitle = "DDangji-log";
 
@@ -16,14 +17,14 @@ const Layout: React.FC<LayoutProps> = ({ children, home }) => {
     <Wrapper>
       <Container>
         <Head>
-          <meta name="description" content="Welcome to Ddangji blog!" />
           <meta name="og:title" content={siteTitle} />
+          <meta name="description" content="Welcome to Ddangji blog!" />
         </Head>
         <main>{children}</main>
         {!home && (
           <BackToHome>
             <Link href="/">
-              <a>← Back to home</a>
+              <Anchor>← Back to home</Anchor>
             </Link>
           </BackToHome>
         )}

@@ -4,13 +4,15 @@ import Link from "next/link";
 
 import {
   Wrapper,
-  Container,
   Contact,
   Box,
   Information,
   IconList,
   Description,
 } from "./FooterStyle";
+import { Anchor, Container } from "../../../styles/CommonStyle";
+
+import { links } from "../../../lib/links";
 
 const Footer = () => {
   return (
@@ -21,22 +23,18 @@ const Footer = () => {
           <Information>
             Email
             <br />
-            <Link href="/">
-              <a>jeongminji5181@gmail.com</a>
+            <Link href={links.email}>
+              <Anchor>jeongminji5181@gmail.com</Anchor>
             </Link>
           </Information>
           <IconList>
             <li>
               <Image src="/images/github.png" width={16} height={16} />
-              <Link href="/">
-                <a>github</a>
-              </Link>
+              <Anchor href={links.github}>github</Anchor>
             </li>
             <li>
               <Image src="/images/instagram.png" width={16} height={16} />
-              <Link href="/">
-                <a>sns</a>
-              </Link>
+              <Anchor href={links.instagram}>sns</Anchor>
             </li>
           </IconList>
           <Description>

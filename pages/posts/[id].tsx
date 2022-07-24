@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getAllPostIds, getPostData } from "../../utils/getPosts";
 import PostTemplate from "../../components/PostTemplate/PostTemplate";
 
 const Post = ({ postData }) => {

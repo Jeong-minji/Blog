@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Container } from "../../../styles/CommonStyle";
 
 export const Line = styled.div`
   width: 100%;
@@ -13,11 +14,10 @@ export const Wrapper = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
-export const Content = styled.div`
+export const Content = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 48rem;
 `;
 
 export const Title = styled.h1`

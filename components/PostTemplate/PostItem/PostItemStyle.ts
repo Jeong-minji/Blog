@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Anchor } from "../../../styles/CommonStyle";
 
 export const Wrapper = styled.li`
   display: flex;
@@ -11,9 +12,7 @@ export const CreatedDate = styled.small`
   color: rgba(0, 0, 0, 0.5);
 `;
 
-export const Title = styled.a`
+export const Title = styled(Anchor)`
   margin-top: -6px;
   font-size: 22px;
-  color: #1756a9;
-  cursor: pointer;
 `;

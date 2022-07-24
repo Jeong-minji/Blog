@@ -1,7 +1,7 @@
 import React from "react";
 
 import Home from "../components/Home/Home";
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData } from "../utils/getPosts";
 
 const Index = ({ allPostsData }) => {
   return <Home allPostsData={allPostsData} />;

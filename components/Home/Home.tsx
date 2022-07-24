@@ -11,7 +11,7 @@ const Home = ({ allPostsData }) => {
       <Title>Posts</Title>
       <ul>
         {allPostsData.map(({ id, date, title }) => (
-          <PostItem id={id} date={date} title={title} />
+          <PostItem key={id} id={id} date={date} title={title} />
         ))}
       </ul>
     </Layout>

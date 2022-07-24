@@ -8,14 +8,7 @@ export const Wrapper = styled.footer`
   width: 100%;
   padding: 40px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-
-  a {
-    color: #1756a9;
-  }
-`;
-
-export const Container = styled.div`
-  width: 48rem;
+  background-color: rgb(253, 253, 253);
 `;
 
 export const Contact = styled.p`

@@ -5,10 +5,6 @@ export const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export const Container = styled.div`
-  width: 48rem;
-`;
-
 export const Header = styled.header`
   display: flex;
   flex-direction: column;
@@ -17,5 +13,4 @@ export const Header = styled.header`
 
 export const BackToHome = styled.div`
   margin: 20px 0;
-  color: #1756a9;
 `;
