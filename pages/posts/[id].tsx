@@ -1,26 +1,10 @@
 import React from "react";
 
-import Head from "next/head";
-
-import Date from "../../components/Date";
-import Layout from "../../components/Layout/Layout";
-
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import { HeadingXl } from "../../styles/CommonStyle";
+import PostTemplate from "../../components/PostTemplate/PostTemplate";
 
 const Post = ({ postData }) => {
-  return (
-    <Layout>
-      <Head>{postData.title}</Head>
-      <article>
-        <HeadingXl>{postData.title}</HeadingXl>
-        <div>
-          <Date dateString={postData.date} />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </Layout>
-  );
+  return <PostTemplate postData={postData} />;
 };
 
 export const getStaticPaths = async () => {

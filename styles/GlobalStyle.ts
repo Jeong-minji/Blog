@@ -6,10 +6,11 @@ export const GlobalStyle = createGlobalStyle`
   
   html,
   body {
+    background-color: rgb(253, 253, 253);
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 400 16px/1.5 -apple-system, 
+      BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   }
 
   a {
