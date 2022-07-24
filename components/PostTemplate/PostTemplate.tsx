@@ -4,17 +4,21 @@ import Head from "next/head";
 import Layout from "../Layout/Layout";
 import Date from "../Common/Date/Date";
 
+import { Content, Title, CreatedDate } from "./PostTemplateStyle";
+
 const PostTemplate = ({ postData }) => {
+  const { title, date, contentHtml } = postData;
+
   return (
     <Layout>
-      <Head>{postData.title}</Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
-          <Date dateString={postData.date} />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
+      <Head>{title}</Head>
+      <Content>
+        <Title>{title}</Title>
+        <CreatedDate>
+          <Date dateString={date} />
+        </CreatedDate>
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      </Content>
     </Layout>
   );
 };

@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const Container = styled.div`
-  max-width: 36rem;
-  margin: 0 88px;
+  width: 48rem;
 `;
 
 export const Header = styled.header`
@@ -12,5 +16,6 @@ export const Header = styled.header`
 `;
 
 export const BackToHome = styled.div`
-  margin: 3rem 0 0;
+  margin: 20px 0;
+  color: #1756a9;
 `;
