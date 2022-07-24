@@ -4,15 +4,15 @@ import Date from "../../components/Date";
 import Layout from "../../components/Layout/Layout";
 
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import utilStyles from "../../styles/utils.module.css";
+import { HeadingXl } from "../../styles/CommonStyle";
 
 const Post = ({ postData }) => {
   return (
     <Layout>
       <Head>{postData.title}</Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <HeadingXl>{postData.title}</HeadingXl>
+        <div>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

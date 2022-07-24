@@ -1,34 +1,34 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
-import styles from "./layout.module.css";
-import utilStyles from "../../styles/utils.module.css";
+import { Container, Header, BackToHome } from "./LayoutStyle";
 
 import profile_image from "../../public/images/profile.png";
+import { Heading2Xl } from "../../styles/CommonStyle";
 
 const name = "DDangji";
+
 export const siteTitle = "DDangji-log";
 
 const Layout = ({ children, home }) => {
   return (
-    <div className={styles.container}>
+    <Container>
       <Head>
-        <meta name="description" content="Welcome to Ddangji FE blog!" />
+        <meta name="description" content="Welcome to Ddangji blog!" />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header className={styles.header}>
+      <Header>
         {home ? (
           <>
             <Image
               priority
               src={profile_image}
-              className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <Heading2Xl>{name}</Heading2Xl>
           </>
         ) : (
           <>
@@ -51,16 +51,16 @@ const Layout = ({ children, home }) => {
             </h2>
           </>
         )}
-      </header>
+      </Header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <BackToHome>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
-        </div>
+        </BackToHome>
       )}
-    </div>
+    </Container>
   );
 };
 
