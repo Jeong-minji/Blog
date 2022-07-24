@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import React from "react";
 
 import Date from "../components/Date";
 import Layout, { siteTitle } from "../components/Layout/Layout";

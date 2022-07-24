@@ -1,17 +1,20 @@
+import React, { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
 import { Container, Header, BackToHome } from "./LayoutStyle";
 
-import profile_image from "../../public/images/profile.png";
-import { Heading2Xl } from "../../styles/CommonStyle";
-
 const name = "DDangji";
 
 export const siteTitle = "DDangji-log";
 
-const Layout = ({ children, home }) => {
+interface LayoutProps {
+  children: ReactNode;
+  home?: boolean;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children, home }) => {
   return (
     <Container>
       <Head>
@@ -23,12 +26,12 @@ const Layout = ({ children, home }) => {
           <>
             <Image
               priority
-              src={profile_image}
+              src="/images/profile.png"
               height={144}
               width={144}
               alt={name}
             />
-            <Heading2Xl>{name}</Heading2Xl>
+            <h2>{name}</h2>
           </>
         ) : (
           <>
@@ -36,17 +39,16 @@ const Layout = ({ children, home }) => {
               <a>
                 <Image
                   priority
-                  src={profile_image}
-                  className={utilStyles.borderCircle}
+                  src="/images/profile.png"
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            <h2>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a>{name}</a>
               </Link>
             </h2>
           </>
